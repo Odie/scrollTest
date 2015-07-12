@@ -85,8 +85,6 @@
 @end
 
 @implementation GKRenderViewController {
-    GLKMatrix4 defaultProjectionMatrix;
-    GLKMatrix4 cameraMatrix;
     BOOL hasDrag;
     BOOL hasZoom;
     CGPoint _viewportTopLeft;
@@ -185,7 +183,6 @@
 
     [self setTopLeft:newOrigin];
     
-    [self updateTransform];
     _panOffset = CGPointZero;
     _scaleRatio = 0;
 }
@@ -194,18 +191,26 @@
     if(self.worldMode == GKWorldFinite) {
         [self updateOffset];
     }
-    GLKMatrix4 projectionMatrix = GLKMatrix4Multiply(defaultProjectionMatrix, cameraMatrix);
-    self.projectionMatrix = projectionMatrix;
 }
 
 - (void) view:(GKRenderView *)view drawInRect:(CGRect)rect {
-    GLKMatrix4 projectionMatrix = self.projectionMatrix;
+	// Clear the previous frame
     glClear(GL_COLOR_BUFFER_BIT);
+	
+	// Calculate the projection matrix
+    CGSize size = [self viewSize];
+    GLKVector3 eye = self.viewCenter;
+	GLKMatrix4 defaultProjectionMatrix = GLKMatrix4MakeOrtho(-size.width/2, size.width/2, -size.height/2, size.height/2, 0.01, 100);
+    GLKMatrix4 cameraMatrix = GLKMatrix4MakeLookAt(eye.x,eye.y,1,eye.x,eye.y,0,0,1,0);
+    GLKMatrix4 projectionMatrix = GLKMatrix4Multiply(defaultProjectionMatrix, cameraMatrix);
+	
+	// Render the world
     [self.backgroundImageObject render:projectionMatrix];
 }
 
 #pragma mark <properties getter/setter>
 
+// Calculate the center of the view in world space
 - (GLKVector3) viewCenter {
     CGSize size = [self viewSize];
     return (GLKVector3){_viewportTopLeft.x+size.width*0.5,_viewportTopLeft.y-size.height*0.5,0};
@@ -311,8 +316,6 @@
     self.visibleRect = self.view.bounds;
     [GKSplatEngine defaultEngine].screenHeight = CGRectGetHeight(self.view.bounds);
     [self setupGL];
-    [self updateProjectionMatrix];
-    self.projectionMatrix = GLKMatrix4Multiply(defaultProjectionMatrix, cameraMatrix);
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -359,7 +362,6 @@
                 self.worldOrigin = (CGPoint){0,0};
                 [self.gestureController addGestureHandler:self.gestureHandler];
             }
-            [self updateTransform];
         });
     }
     self.renderView.paused = NO;
@@ -425,13 +427,6 @@
     }
 }
 
-- (void) updateProjectionMatrix {
-    CGSize size = [self viewSize];
-    GLKVector3 eye = self.viewCenter;
-    defaultProjectionMatrix = GLKMatrix4MakeOrtho(-size.width/2, size.width/2, -size.height/2, size.height/2, 0.01, 100);
-    cameraMatrix = GLKMatrix4MakeLookAt(eye.x,eye.y,1,eye.x,eye.y,0,0,1,0);
-}
-
 #pragma mark <transform updates>
 
 - (void) setViewportOffset:(CGPoint)inOffset scale:(CGFloat)inScale {
@@ -443,34 +438,15 @@
     scale *= _cropScale;
     self.worldOrigin = offset;
     self.worldScale = scale;
-    __weak typeof(self) weakSelf = self;
-    GKRenderDispatch(YES, ^{
-        __strong typeof(weakSelf) self = weakSelf;
-        [self updateTransform];
-    });
 }
 
+// Calculate the size of the view in world space
 - (CGSize) viewSize {
     CGFloat viewWidth = CGRectGetWidth(self.view.bounds);
     CGFloat viewHeight = CGRectGetHeight(self.view.bounds);
     CGFloat newViewWidth = viewWidth/_worldScale*_viewPortMultiplier;
     CGFloat newViewHeigh = viewHeight/_worldScale*_viewPortMultiplier;
     return (CGSize){newViewWidth,newViewHeigh};
-}
-
-- (void) updateTransform {
-    CGSize viewSize = [self viewSize];
-    GLKVector3 eye = self.viewCenter;
-    defaultProjectionMatrix = GLKMatrix4MakeOrtho(-viewSize.width/2, viewSize.width/2, -viewSize.height/2, viewSize.height/2, 0.01, 100);
-    cameraMatrix = GLKMatrix4MakeLookAt(eye.x,eye.y,1,eye.x,eye.y,0,0,1,0);
-    
-    CGRect visibleRect;
-    CGFloat minX = _viewportTopLeft.x-viewSize.width/2;
-    CGFloat minY = _viewportTopLeft.y-viewSize.height-viewSize.height/2;
-    CGFloat width = viewSize.width*2;
-    CGFloat height = viewSize.height*2;
-    visibleRect.origin = (CGPoint){minX,minY};
-    visibleRect.size = (CGSize){width,height};
 }
 
 @end
