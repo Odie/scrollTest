@@ -1,0 +1,890 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		182882F61A49300800745E8E /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 182882F51A49300800745E8E /* UIView+Utils.m */; };
+		182882FE1A4948A100745E8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182882FD1A4948A100745E8E /* Images.xcassets */; };
+		1828830A1A4950D600745E8E /* GKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182883091A4950D600745E8E /* GKMainViewController.m */; };
+		1828830C1A4963AA00745E8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1828830B1A4963AA00745E8E /* Main.storyboard */; };
+		18291AFE1A8219B8007F0299 /* particleTestTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 18291AFD1A8219B8007F0299 /* particleTestTexture.png */; };
+		1844D2B91A8C20B200A2AD8D /* particleTestTexture2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1844D2B81A8C20B200A2AD8D /* particleTestTexture2.png */; };
+		184E2F801B520ED300750CD0 /* CGPointExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F0C1B520ED300750CD0 /* CGPointExtension.m */; };
+		184E2F821B520ED300750CD0 /* EAGLContext+GraphitiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F101B520ED300750CD0 /* EAGLContext+GraphitiKit.m */; };
+		184E2F831B520ED300750CD0 /* EAGLContextStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F121B520ED300750CD0 /* EAGLContextStack.m */; };
+		184E2F871B520ED300750CD0 /* GKComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F1B1B520ED300750CD0 /* GKComponent.m */; };
+		184E2F881B520ED300750CD0 /* GKComponentSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F1D1B520ED300750CD0 /* GKComponentSystem.m */; };
+		184E2F891B520ED300750CD0 /* GKDrawGestureAwareObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F1F1B520ED300750CD0 /* GKDrawGestureAwareObject.m */; };
+		184E2F8A1B520ED300750CD0 /* GKDripManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F211B520ED300750CD0 /* GKDripManager.m */; };
+		184E2F8B1B520ED300750CD0 /* GKFence.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F231B520ED300750CD0 /* GKFence.m */; };
+		184E2F8C1B520ED300750CD0 /* GKGeometryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F251B520ED300750CD0 /* GKGeometryObject.m */; };
+		184E2F8D1B520ED300750CD0 /* GKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F271B520ED300750CD0 /* GKLog.m */; };
+		184E2F8E1B520ED300750CD0 /* GKObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F291B520ED300750CD0 /* GKObject.m */; };
+		184E2F901B520ED300750CD0 /* GKRenderDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F2D1B520ED300750CD0 /* GKRenderDispatcher.m */; };
+		184E2F911B520ED300750CD0 /* GKRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F301B520ED300750CD0 /* GKRenderView.m */; };
+		184E2F921B520ED300750CD0 /* GKRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F321B520ED300750CD0 /* GKRenderViewController.m */; };
+		184E2F931B520ED300750CD0 /* GKRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F341B520ED300750CD0 /* GKRenderer.m */; };
+		184E2F941B520ED300750CD0 /* GKSnapShotEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F361B520ED300750CD0 /* GKSnapShotEngine.m */; };
+		184E2F951B520ED300750CD0 /* GKSplatEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F381B520ED300750CD0 /* GKSplatEngine.m */; };
+		184E2F961B520ED300750CD0 /* GKTextureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F3A1B520ED300750CD0 /* GKTextureHelper.m */; };
+		184E2F981B520ED300750CD0 /* GKTransformableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F3F1B520ED300750CD0 /* GKTransformableObject.m */; };
+		184E2F9A1B520ED300750CD0 /* GKVertexArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F441B520ED300750CD0 /* GKVertexArrayObject.m */; };
+		184E2F9B1B520ED300750CD0 /* GKViewportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F461B520ED300750CD0 /* GKViewportHelper.m */; };
+		184E2F9C1B520ED300750CD0 /* GLSLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F481B520ED300750CD0 /* GLSLProgram.m */; };
+		184E2F9D1B520ED300750CD0 /* GLShaderProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F4A1B520ED300750CD0 /* GLShaderProgram.m */; };
+		184E2F9E1B520ED300750CD0 /* GPDrawGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F4C1B520ED300750CD0 /* GPDrawGestureRecognizer.m */; };
+		184E2FA31B520ED300750CD0 /* GPPointTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F571B520ED300750CD0 /* GPPointTracker.m */; };
+		184E2FA81B520ED300750CD0 /* GestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F611B520ED300750CD0 /* GestureController.m */; };
+		184E2FA91B520ED300750CD0 /* MotionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F651B520ED300750CD0 /* MotionController.m */; };
+		184E2FAA1B520ED300750CD0 /* NSBundle+GraphitiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F671B520ED300750CD0 /* NSBundle+GraphitiKit.m */; };
+		184E2FAB1B520ED300750CD0 /* NSMutableArray+GraphitiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F691B520ED300750CD0 /* NSMutableArray+GraphitiKit.m */; };
+		184E2FAC1B520ED300750CD0 /* NSString+GraphitiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F6B1B520ED300750CD0 /* NSString+GraphitiKit.m */; };
+		184E2FAE1B520ED300750CD0 /* QuadraticPointTessellationStratergy.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F701B520ED300750CD0 /* QuadraticPointTessellationStratergy.m */; };
+		184E2FB31B520ED300750CD0 /* UIColor+GraphitiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F7A1B520ED300750CD0 /* UIColor+GraphitiKit.m */; };
+		184E2FB41B520ED300750CD0 /* UIScreen+GraphitiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F7C1B520ED300750CD0 /* UIScreen+GraphitiKit.m */; };
+		184E2FB51B520ED300750CD0 /* UIScrollView+GKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E2F7E1B520ED300750CD0 /* UIScrollView+GKExtension.m */; };
+		184E2FC21B520EEA00750CD0 /* AlphaTestFragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FB61B520EEA00750CD0 /* AlphaTestFragmentShader.fsh */; };
+		184E2FC31B520EEA00750CD0 /* ColorFragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FB71B520EEA00750CD0 /* ColorFragmentShader.fsh */; };
+		184E2FC41B520EEA00750CD0 /* ConstantAlphaColorFragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FB81B520EEA00750CD0 /* ConstantAlphaColorFragmentShader.fsh */; };
+		184E2FC51B520EEA00750CD0 /* DynamicColorFragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FB91B520EEA00750CD0 /* DynamicColorFragmentShader.fsh */; };
+		184E2FC61B520EEA00750CD0 /* DynamicVertexShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FBA1B520EEA00750CD0 /* DynamicVertexShader.vsh */; };
+		184E2FC71B520EEA00750CD0 /* Fire.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FBB1B520EEA00750CD0 /* Fire.fsh */; };
+		184E2FC81B520EEA00750CD0 /* FragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FBC1B520EEA00750CD0 /* FragmentShader.fsh */; };
+		184E2FC91B520EEA00750CD0 /* PointFragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FBD1B520EEA00750CD0 /* PointFragmentShader.fsh */; };
+		184E2FCA1B520EEA00750CD0 /* PointVertexShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FBE1B520EEA00750CD0 /* PointVertexShader.vsh */; };
+		184E2FCB1B520EEA00750CD0 /* VertexShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FBF1B520EEA00750CD0 /* VertexShader.vsh */; };
+		184E2FCC1B520EEA00750CD0 /* point.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FC01B520EEA00750CD0 /* point.fsh */; };
+		184E2FCD1B520EEA00750CD0 /* point.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 184E2FC11B520EEA00750CD0 /* point.vsh */; };
+		1883E8EE1A4AAF9800EDA4D8 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883E8ED1A4AAF9800EDA4D8 /* UIColor+HexColor.m */; };
+		18A898A11A95773C0074D94C /* testbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A898A01A95773C0074D94C /* testbackground.png */; };
+		18AA09821B4B9FFB00372F48 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AA09811B4B9FFB00372F48 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		18F56DCA1B14448D00269592 /* UIColor+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F56DC91B14448D00269592 /* UIColor+Helpers.m */; };
+		18F9F0411A43FE73002EB7A8 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF601A43FE73002EB7A8 /* icon_close.png */; };
+		18F9F0421A43FE73002EB7A8 /* icon_export.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF611A43FE73002EB7A8 /* icon_export.png */; };
+		18F9F0431A43FE73002EB7A8 /* icon_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF621A43FE73002EB7A8 /* icon_image.png */; };
+		18F9F0441A43FE73002EB7A8 /* icon_marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF631A43FE73002EB7A8 /* icon_marker.png */; };
+		18F9F0451A43FE73002EB7A8 /* icon_sprayPaint.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF641A43FE73002EB7A8 /* icon_sprayPaint.png */; };
+		18F9F0461A43FE73002EB7A8 /* icon_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF651A43FE73002EB7A8 /* icon_web.png */; };
+		18F9F0471A43FE73002EB7A8 /* stencil_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF661A43FE73002EB7A8 /* stencil_circle.png */; };
+		18F9F0481A43FE73002EB7A8 /* stencil_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9EF671A43FE73002EB7A8 /* stencil_star.png */; };
+		18F9F0A91A43FE74002EB7A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9EFD01A43FE73002EB7A8 /* AppDelegate.m */; };
+		18F9F0D81A43FE74002EB7A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F9F0311A43FE73002EB7A8 /* LaunchScreen.xib */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = "GraphitiKit-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		182882F41A49300800745E8E /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		182882F51A49300800745E8E /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		182882FA1A493B3900745E8E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		182882FD1A4948A100745E8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		182883081A4950D600745E8E /* GKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKMainViewController.h; sourceTree = "<group>"; };
+		182883091A4950D600745E8E /* GKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKMainViewController.m; sourceTree = "<group>"; };
+		1828830B1A4963AA00745E8E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		18291AFD1A8219B8007F0299 /* particleTestTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particleTestTexture.png; sourceTree = "<group>"; };
+		1844D2B81A8C20B200A2AD8D /* particleTestTexture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particleTestTexture2.png; sourceTree = "<group>"; };
+		184E2F0B1B520ED300750CD0 /* CGPointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointExtension.h; sourceTree = "<group>"; };
+		184E2F0C1B520ED300750CD0 /* CGPointExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointExtension.m; sourceTree = "<group>"; };
+		184E2F0F1B520ED300750CD0 /* EAGLContext+GraphitiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EAGLContext+GraphitiKit.h"; sourceTree = "<group>"; };
+		184E2F101B520ED300750CD0 /* EAGLContext+GraphitiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EAGLContext+GraphitiKit.m"; sourceTree = "<group>"; };
+		184E2F111B520ED300750CD0 /* EAGLContextStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLContextStack.h; sourceTree = "<group>"; };
+		184E2F121B520ED300750CD0 /* EAGLContextStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLContextStack.m; sourceTree = "<group>"; };
+		184E2F151B520ED300750CD0 /* GKAudioControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAudioControllerDelegate.h; sourceTree = "<group>"; };
+		184E2F1A1B520ED300750CD0 /* GKComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKComponent.h; sourceTree = "<group>"; };
+		184E2F1B1B520ED300750CD0 /* GKComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKComponent.m; sourceTree = "<group>"; };
+		184E2F1C1B520ED300750CD0 /* GKComponentSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKComponentSystem.h; sourceTree = "<group>"; };
+		184E2F1D1B520ED300750CD0 /* GKComponentSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKComponentSystem.m; sourceTree = "<group>"; };
+		184E2F1E1B520ED300750CD0 /* GKDrawGestureAwareObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDrawGestureAwareObject.h; sourceTree = "<group>"; };
+		184E2F1F1B520ED300750CD0 /* GKDrawGestureAwareObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDrawGestureAwareObject.m; sourceTree = "<group>"; };
+		184E2F201B520ED300750CD0 /* GKDripManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDripManager.h; sourceTree = "<group>"; };
+		184E2F211B520ED300750CD0 /* GKDripManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDripManager.m; sourceTree = "<group>"; };
+		184E2F221B520ED300750CD0 /* GKFence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKFence.h; sourceTree = "<group>"; };
+		184E2F231B520ED300750CD0 /* GKFence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKFence.m; sourceTree = "<group>"; };
+		184E2F241B520ED300750CD0 /* GKGeometryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKGeometryObject.h; sourceTree = "<group>"; };
+		184E2F251B520ED300750CD0 /* GKGeometryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKGeometryObject.m; sourceTree = "<group>"; };
+		184E2F261B520ED300750CD0 /* GKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLog.h; sourceTree = "<group>"; };
+		184E2F271B520ED300750CD0 /* GKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLog.m; sourceTree = "<group>"; };
+		184E2F281B520ED300750CD0 /* GKObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKObject.h; sourceTree = "<group>"; };
+		184E2F291B520ED300750CD0 /* GKObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKObject.m; sourceTree = "<group>"; };
+		184E2F2C1B520ED300750CD0 /* GKRenderDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRenderDispatcher.h; sourceTree = "<group>"; };
+		184E2F2D1B520ED300750CD0 /* GKRenderDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRenderDispatcher.m; sourceTree = "<group>"; };
+		184E2F2E1B520ED300750CD0 /* GKRenderDispatcher+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GKRenderDispatcher+Private.h"; sourceTree = "<group>"; };
+		184E2F2F1B520ED300750CD0 /* GKRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRenderView.h; sourceTree = "<group>"; };
+		184E2F301B520ED300750CD0 /* GKRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRenderView.m; sourceTree = "<group>"; };
+		184E2F311B520ED300750CD0 /* GKRenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRenderViewController.h; sourceTree = "<group>"; };
+		184E2F321B520ED300750CD0 /* GKRenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRenderViewController.m; sourceTree = "<group>"; };
+		184E2F331B520ED300750CD0 /* GKRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRenderer.h; sourceTree = "<group>"; };
+		184E2F341B520ED300750CD0 /* GKRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRenderer.m; sourceTree = "<group>"; };
+		184E2F351B520ED300750CD0 /* GKSnapShotEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSnapShotEngine.h; sourceTree = "<group>"; };
+		184E2F361B520ED300750CD0 /* GKSnapShotEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSnapShotEngine.m; sourceTree = "<group>"; };
+		184E2F371B520ED300750CD0 /* GKSplatEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSplatEngine.h; sourceTree = "<group>"; };
+		184E2F381B520ED300750CD0 /* GKSplatEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSplatEngine.m; sourceTree = "<group>"; };
+		184E2F391B520ED300750CD0 /* GKTextureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKTextureHelper.h; sourceTree = "<group>"; };
+		184E2F3A1B520ED300750CD0 /* GKTextureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKTextureHelper.m; sourceTree = "<group>"; };
+		184E2F3D1B520ED300750CD0 /* GKTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKTool.h; sourceTree = "<group>"; };
+		184E2F3E1B520ED300750CD0 /* GKTransformableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKTransformableObject.h; sourceTree = "<group>"; };
+		184E2F3F1B520ED300750CD0 /* GKTransformableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKTransformableObject.m; sourceTree = "<group>"; };
+		184E2F421B520ED300750CD0 /* GKVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVertex.h; sourceTree = "<group>"; };
+		184E2F431B520ED300750CD0 /* GKVertexArrayObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKVertexArrayObject.h; sourceTree = "<group>"; };
+		184E2F441B520ED300750CD0 /* GKVertexArrayObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKVertexArrayObject.m; sourceTree = "<group>"; };
+		184E2F451B520ED300750CD0 /* GKViewportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKViewportHelper.h; sourceTree = "<group>"; };
+		184E2F461B520ED300750CD0 /* GKViewportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKViewportHelper.m; sourceTree = "<group>"; };
+		184E2F471B520ED300750CD0 /* GLSLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSLProgram.h; sourceTree = "<group>"; };
+		184E2F481B520ED300750CD0 /* GLSLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSLProgram.m; sourceTree = "<group>"; };
+		184E2F491B520ED300750CD0 /* GLShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShaderProgram.h; sourceTree = "<group>"; };
+		184E2F4A1B520ED300750CD0 /* GLShaderProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShaderProgram.m; sourceTree = "<group>"; };
+		184E2F4B1B520ED300750CD0 /* GPDrawGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDrawGestureRecognizer.h; sourceTree = "<group>"; };
+		184E2F4C1B520ED300750CD0 /* GPDrawGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDrawGestureRecognizer.m; sourceTree = "<group>"; };
+		184E2F4D1B520ED300750CD0 /* GPGestureHandlerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGestureHandlerDelegate.h; sourceTree = "<group>"; };
+		184E2F561B520ED300750CD0 /* GPPointTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPointTracker.h; sourceTree = "<group>"; };
+		184E2F571B520ED300750CD0 /* GPPointTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPointTracker.m; sourceTree = "<group>"; };
+		184E2F601B520ED300750CD0 /* GestureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureController.h; sourceTree = "<group>"; };
+		184E2F611B520ED300750CD0 /* GestureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureController.m; sourceTree = "<group>"; };
+		184E2F621B520ED300750CD0 /* GraphitiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphitiKit.h; sourceTree = "<group>"; };
+		184E2F631B520ED300750CD0 /* GraphitiKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphitiKitMacros.h; sourceTree = "<group>"; };
+		184E2F641B520ED300750CD0 /* MotionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionController.h; sourceTree = "<group>"; };
+		184E2F651B520ED300750CD0 /* MotionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionController.m; sourceTree = "<group>"; };
+		184E2F661B520ED300750CD0 /* NSBundle+GraphitiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+GraphitiKit.h"; sourceTree = "<group>"; };
+		184E2F671B520ED300750CD0 /* NSBundle+GraphitiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+GraphitiKit.m"; sourceTree = "<group>"; };
+		184E2F681B520ED300750CD0 /* NSMutableArray+GraphitiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+GraphitiKit.h"; sourceTree = "<group>"; };
+		184E2F691B520ED300750CD0 /* NSMutableArray+GraphitiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+GraphitiKit.m"; sourceTree = "<group>"; };
+		184E2F6A1B520ED300750CD0 /* NSString+GraphitiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GraphitiKit.h"; sourceTree = "<group>"; };
+		184E2F6B1B520ED300750CD0 /* NSString+GraphitiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GraphitiKit.m"; sourceTree = "<group>"; };
+		184E2F6F1B520ED300750CD0 /* QuadraticPointTessellationStratergy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticPointTessellationStratergy.h; sourceTree = "<group>"; };
+		184E2F701B520ED300750CD0 /* QuadraticPointTessellationStratergy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticPointTessellationStratergy.m; sourceTree = "<group>"; };
+		184E2F791B520ED300750CD0 /* UIColor+GraphitiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GraphitiKit.h"; sourceTree = "<group>"; };
+		184E2F7A1B520ED300750CD0 /* UIColor+GraphitiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GraphitiKit.m"; sourceTree = "<group>"; };
+		184E2F7B1B520ED300750CD0 /* UIScreen+GraphitiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+GraphitiKit.h"; sourceTree = "<group>"; };
+		184E2F7C1B520ED300750CD0 /* UIScreen+GraphitiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+GraphitiKit.m"; sourceTree = "<group>"; };
+		184E2F7D1B520ED300750CD0 /* UIScrollView+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GKExtension.h"; sourceTree = "<group>"; };
+		184E2F7E1B520ED300750CD0 /* UIScrollView+GKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GKExtension.m"; sourceTree = "<group>"; };
+		184E2FB61B520EEA00750CD0 /* AlphaTestFragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = AlphaTestFragmentShader.fsh; sourceTree = "<group>"; };
+		184E2FB71B520EEA00750CD0 /* ColorFragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ColorFragmentShader.fsh; sourceTree = "<group>"; };
+		184E2FB81B520EEA00750CD0 /* ConstantAlphaColorFragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ConstantAlphaColorFragmentShader.fsh; sourceTree = "<group>"; };
+		184E2FB91B520EEA00750CD0 /* DynamicColorFragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DynamicColorFragmentShader.fsh; sourceTree = "<group>"; };
+		184E2FBA1B520EEA00750CD0 /* DynamicVertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = DynamicVertexShader.vsh; sourceTree = "<group>"; };
+		184E2FBB1B520EEA00750CD0 /* Fire.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Fire.fsh; sourceTree = "<group>"; };
+		184E2FBC1B520EEA00750CD0 /* FragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
+		184E2FBD1B520EEA00750CD0 /* PointFragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PointFragmentShader.fsh; sourceTree = "<group>"; };
+		184E2FBE1B520EEA00750CD0 /* PointVertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PointVertexShader.vsh; sourceTree = "<group>"; };
+		184E2FBF1B520EEA00750CD0 /* VertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
+		184E2FC01B520EEA00750CD0 /* point.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.fsh; sourceTree = "<group>"; };
+		184E2FC11B520EEA00750CD0 /* point.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.vsh; sourceTree = "<group>"; };
+		1883E8EC1A4AAF9800EDA4D8 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		1883E8ED1A4AAF9800EDA4D8 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		18A898A01A95773C0074D94C /* testbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testbackground.png; sourceTree = "<group>"; };
+		18AA09811B4B9FFB00372F48 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		18F56DC81B14448D00269592 /* UIColor+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helpers.h"; sourceTree = "<group>"; };
+		18F56DC91B14448D00269592 /* UIColor+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helpers.m"; sourceTree = "<group>"; };
+		18F9EF601A43FE73002EB7A8 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		18F9EF611A43FE73002EB7A8 /* icon_export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_export.png; sourceTree = "<group>"; };
+		18F9EF621A43FE73002EB7A8 /* icon_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_image.png; sourceTree = "<group>"; };
+		18F9EF631A43FE73002EB7A8 /* icon_marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_marker.png; sourceTree = "<group>"; };
+		18F9EF641A43FE73002EB7A8 /* icon_sprayPaint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sprayPaint.png; sourceTree = "<group>"; };
+		18F9EF651A43FE73002EB7A8 /* icon_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_web.png; sourceTree = "<group>"; };
+		18F9EF661A43FE73002EB7A8 /* stencil_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stencil_circle.png; sourceTree = "<group>"; };
+		18F9EF671A43FE73002EB7A8 /* stencil_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stencil_star.png; sourceTree = "<group>"; };
+		18F9EFD01A43FE73002EB7A8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18F9F02F1A43FE73002EB7A8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18F9F0321A43FE73002EB7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* GraphitiKit-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GraphitiKit-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* GraphitiKit-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GraphitiKit-iOS-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* GraphitiKit-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraphitiKit-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18AA09821B4B9FFB00372F48 /* WebKit.framework in Frameworks */,
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		182882F31A492FF700745E8E /* ObjCCategories */ = {
+			isa = PBXGroup;
+			children = (
+				1883E8EC1A4AAF9800EDA4D8 /* UIColor+HexColor.h */,
+				1883E8ED1A4AAF9800EDA4D8 /* UIColor+HexColor.m */,
+				182882F41A49300800745E8E /* UIView+Utils.h */,
+				182882F51A49300800745E8E /* UIView+Utils.m */,
+			);
+			path = ObjCCategories;
+			sourceTree = "<group>";
+		};
+		184E2F081B520EB800750CD0 /* kit */ = {
+			isa = PBXGroup;
+			children = (
+				184E2F0B1B520ED300750CD0 /* CGPointExtension.h */,
+				184E2F0C1B520ED300750CD0 /* CGPointExtension.m */,
+				184E2F0F1B520ED300750CD0 /* EAGLContext+GraphitiKit.h */,
+				184E2F101B520ED300750CD0 /* EAGLContext+GraphitiKit.m */,
+				184E2F111B520ED300750CD0 /* EAGLContextStack.h */,
+				184E2F121B520ED300750CD0 /* EAGLContextStack.m */,
+				184E2F151B520ED300750CD0 /* GKAudioControllerDelegate.h */,
+				184E2F1A1B520ED300750CD0 /* GKComponent.h */,
+				184E2F1B1B520ED300750CD0 /* GKComponent.m */,
+				184E2F1C1B520ED300750CD0 /* GKComponentSystem.h */,
+				184E2F1D1B520ED300750CD0 /* GKComponentSystem.m */,
+				184E2F1E1B520ED300750CD0 /* GKDrawGestureAwareObject.h */,
+				184E2F1F1B520ED300750CD0 /* GKDrawGestureAwareObject.m */,
+				184E2F201B520ED300750CD0 /* GKDripManager.h */,
+				184E2F211B520ED300750CD0 /* GKDripManager.m */,
+				184E2F221B520ED300750CD0 /* GKFence.h */,
+				184E2F231B520ED300750CD0 /* GKFence.m */,
+				184E2F241B520ED300750CD0 /* GKGeometryObject.h */,
+				184E2F251B520ED300750CD0 /* GKGeometryObject.m */,
+				184E2F261B520ED300750CD0 /* GKLog.h */,
+				184E2F271B520ED300750CD0 /* GKLog.m */,
+				184E2F281B520ED300750CD0 /* GKObject.h */,
+				184E2F291B520ED300750CD0 /* GKObject.m */,
+				184E2F2C1B520ED300750CD0 /* GKRenderDispatcher.h */,
+				184E2F2D1B520ED300750CD0 /* GKRenderDispatcher.m */,
+				184E2F2E1B520ED300750CD0 /* GKRenderDispatcher+Private.h */,
+				184E2F2F1B520ED300750CD0 /* GKRenderView.h */,
+				184E2F301B520ED300750CD0 /* GKRenderView.m */,
+				184E2F311B520ED300750CD0 /* GKRenderViewController.h */,
+				184E2F321B520ED300750CD0 /* GKRenderViewController.m */,
+				184E2F331B520ED300750CD0 /* GKRenderer.h */,
+				184E2F341B520ED300750CD0 /* GKRenderer.m */,
+				184E2F351B520ED300750CD0 /* GKSnapShotEngine.h */,
+				184E2F361B520ED300750CD0 /* GKSnapShotEngine.m */,
+				184E2F371B520ED300750CD0 /* GKSplatEngine.h */,
+				184E2F381B520ED300750CD0 /* GKSplatEngine.m */,
+				184E2F391B520ED300750CD0 /* GKTextureHelper.h */,
+				184E2F3A1B520ED300750CD0 /* GKTextureHelper.m */,
+				184E2F3D1B520ED300750CD0 /* GKTool.h */,
+				184E2F3E1B520ED300750CD0 /* GKTransformableObject.h */,
+				184E2F3F1B520ED300750CD0 /* GKTransformableObject.m */,
+				184E2F421B520ED300750CD0 /* GKVertex.h */,
+				184E2F431B520ED300750CD0 /* GKVertexArrayObject.h */,
+				184E2F441B520ED300750CD0 /* GKVertexArrayObject.m */,
+				184E2F451B520ED300750CD0 /* GKViewportHelper.h */,
+				184E2F461B520ED300750CD0 /* GKViewportHelper.m */,
+				184E2F471B520ED300750CD0 /* GLSLProgram.h */,
+				184E2F481B520ED300750CD0 /* GLSLProgram.m */,
+				184E2F491B520ED300750CD0 /* GLShaderProgram.h */,
+				184E2F4A1B520ED300750CD0 /* GLShaderProgram.m */,
+				184E2F4B1B520ED300750CD0 /* GPDrawGestureRecognizer.h */,
+				184E2F4C1B520ED300750CD0 /* GPDrawGestureRecognizer.m */,
+				184E2F4D1B520ED300750CD0 /* GPGestureHandlerDelegate.h */,
+				184E2F561B520ED300750CD0 /* GPPointTracker.h */,
+				184E2F571B520ED300750CD0 /* GPPointTracker.m */,
+				184E2F601B520ED300750CD0 /* GestureController.h */,
+				184E2F611B520ED300750CD0 /* GestureController.m */,
+				184E2F621B520ED300750CD0 /* GraphitiKit.h */,
+				184E2F631B520ED300750CD0 /* GraphitiKitMacros.h */,
+				184E2F641B520ED300750CD0 /* MotionController.h */,
+				184E2F651B520ED300750CD0 /* MotionController.m */,
+				184E2F661B520ED300750CD0 /* NSBundle+GraphitiKit.h */,
+				184E2F671B520ED300750CD0 /* NSBundle+GraphitiKit.m */,
+				184E2F681B520ED300750CD0 /* NSMutableArray+GraphitiKit.h */,
+				184E2F691B520ED300750CD0 /* NSMutableArray+GraphitiKit.m */,
+				184E2F6A1B520ED300750CD0 /* NSString+GraphitiKit.h */,
+				184E2F6B1B520ED300750CD0 /* NSString+GraphitiKit.m */,
+				184E2F6F1B520ED300750CD0 /* QuadraticPointTessellationStratergy.h */,
+				184E2F701B520ED300750CD0 /* QuadraticPointTessellationStratergy.m */,
+				184E2F791B520ED300750CD0 /* UIColor+GraphitiKit.h */,
+				184E2F7A1B520ED300750CD0 /* UIColor+GraphitiKit.m */,
+				184E2F7B1B520ED300750CD0 /* UIScreen+GraphitiKit.h */,
+				184E2F7C1B520ED300750CD0 /* UIScreen+GraphitiKit.m */,
+				184E2F7D1B520ED300750CD0 /* UIScrollView+GKExtension.h */,
+				184E2F7E1B520ED300750CD0 /* UIScrollView+GKExtension.m */,
+			);
+			name = kit;
+			sourceTree = "<group>";
+		};
+		1883E8BC1A4A55B300EDA4D8 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		18F9EF541A43FE73002EB7A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				184E2FB61B520EEA00750CD0 /* AlphaTestFragmentShader.fsh */,
+				184E2FB71B520EEA00750CD0 /* ColorFragmentShader.fsh */,
+				184E2FB81B520EEA00750CD0 /* ConstantAlphaColorFragmentShader.fsh */,
+				184E2FB91B520EEA00750CD0 /* DynamicColorFragmentShader.fsh */,
+				184E2FBA1B520EEA00750CD0 /* DynamicVertexShader.vsh */,
+				184E2FBB1B520EEA00750CD0 /* Fire.fsh */,
+				184E2FBC1B520EEA00750CD0 /* FragmentShader.fsh */,
+				184E2FBD1B520EEA00750CD0 /* PointFragmentShader.fsh */,
+				184E2FBE1B520EEA00750CD0 /* PointVertexShader.vsh */,
+				184E2FBF1B520EEA00750CD0 /* VertexShader.vsh */,
+				184E2FC01B520EEA00750CD0 /* point.fsh */,
+				184E2FC11B520EEA00750CD0 /* point.vsh */,
+				18F9EF5F1A43FE73002EB7A8 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18F9EF5F1A43FE73002EB7A8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				18F9EF601A43FE73002EB7A8 /* icon_close.png */,
+				18F9EF611A43FE73002EB7A8 /* icon_export.png */,
+				18F9EF621A43FE73002EB7A8 /* icon_image.png */,
+				18F9EF631A43FE73002EB7A8 /* icon_marker.png */,
+				18F9EF641A43FE73002EB7A8 /* icon_sprayPaint.png */,
+				18F9EF651A43FE73002EB7A8 /* icon_web.png */,
+				18291AFD1A8219B8007F0299 /* particleTestTexture.png */,
+				1844D2B81A8C20B200A2AD8D /* particleTestTexture2.png */,
+				18F9EF661A43FE73002EB7A8 /* stencil_circle.png */,
+				18F9EF671A43FE73002EB7A8 /* stencil_star.png */,
+				18A898A01A95773C0074D94C /* testbackground.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		18F9EFD11A43FE73002EB7A8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				18F9EFD41A43FE73002EB7A8 /* Controllers */,
+				1883E8BC1A4A55B300EDA4D8 /* Lib */,
+				182882F31A492FF700745E8E /* ObjCCategories */,
+				1828830B1A4963AA00745E8E /* Main.storyboard */,
+				18F56DC81B14448D00269592 /* UIColor+Helpers.h */,
+				18F56DC91B14448D00269592 /* UIColor+Helpers.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		18F9EFD41A43FE73002EB7A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				182883081A4950D600745E8E /* GKMainViewController.h */,
+				182883091A4950D600745E8E /* GKMainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F593195388D20070C39A /* GraphitiKit-iOS */,
+				6003F58B195388D20070C39A /* Products */,
+				6003F5B5195388D20070C39A /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* GraphitiKit-iOS.app */,
+				6003F5AE195388D20070C39A /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18AA09811B4B9FFB00372F48 /* WebKit.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				182882FA1A493B3900745E8E /* libz.dylib */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* GraphitiKit-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				184E2F081B520EB800750CD0 /* kit */,
+				18F9EF541A43FE73002EB7A8 /* Resources */,
+				18F9EFD11A43FE73002EB7A8 /* Source */,
+				6003F594195388D20070C39A /* Supporting Files */,
+				18F9F02F1A43FE73002EB7A8 /* AppDelegate.h */,
+				18F9EFD01A43FE73002EB7A8 /* AppDelegate.m */,
+				182882FD1A4948A100745E8E /* Images.xcassets */,
+				18F9F0311A43FE73002EB7A8 /* LaunchScreen.xib */,
+			);
+			path = "GraphitiKit-iOS";
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* GraphitiKit-iOS-Info.plist */,
+				6003F59B195388D20070C39A /* GraphitiKit-iOS-Prefix.pch */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B6195388D20070C39A /* Supporting Files */,
+				6003F5BB195388D20070C39A /* Tests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* GraphitiKit-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "GraphitiKit-iOS" */;
+			buildPhases = (
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GraphitiKit-iOS";
+			productName = "GraphitiKit-iOS";
+			productReference = 6003F58A195388D20070C39A /* GraphitiKit-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = "GraphitiKit-iOSTests";
+			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GK;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Jason Chang";
+				TargetAttributes = {
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "GraphitiKit-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* GraphitiKit-iOS */,
+				6003F5AD195388D20070C39A /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184E2FC61B520EEA00750CD0 /* DynamicVertexShader.vsh in Resources */,
+				184E2FC91B520EEA00750CD0 /* PointFragmentShader.fsh in Resources */,
+				184E2FC31B520EEA00750CD0 /* ColorFragmentShader.fsh in Resources */,
+				18F9F0411A43FE73002EB7A8 /* icon_close.png in Resources */,
+				184E2FCC1B520EEA00750CD0 /* point.fsh in Resources */,
+				18F9F0421A43FE73002EB7A8 /* icon_export.png in Resources */,
+				18F9F0431A43FE73002EB7A8 /* icon_image.png in Resources */,
+				18F9F0441A43FE73002EB7A8 /* icon_marker.png in Resources */,
+				18F9F0451A43FE73002EB7A8 /* icon_sprayPaint.png in Resources */,
+				18F9F0461A43FE73002EB7A8 /* icon_web.png in Resources */,
+				182882FE1A4948A100745E8E /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				18F9F0D81A43FE74002EB7A8 /* LaunchScreen.xib in Resources */,
+				1828830C1A4963AA00745E8E /* Main.storyboard in Resources */,
+				184E2FCA1B520EEA00750CD0 /* PointVertexShader.vsh in Resources */,
+				18291AFE1A8219B8007F0299 /* particleTestTexture.png in Resources */,
+				1844D2B91A8C20B200A2AD8D /* particleTestTexture2.png in Resources */,
+				184E2FC41B520EEA00750CD0 /* ConstantAlphaColorFragmentShader.fsh in Resources */,
+				18F9F0471A43FE73002EB7A8 /* stencil_circle.png in Resources */,
+				18F9F0481A43FE73002EB7A8 /* stencil_star.png in Resources */,
+				184E2FC51B520EEA00750CD0 /* DynamicColorFragmentShader.fsh in Resources */,
+				18A898A11A95773C0074D94C /* testbackground.png in Resources */,
+				184E2FCD1B520EEA00750CD0 /* point.vsh in Resources */,
+				184E2FC71B520EEA00750CD0 /* Fire.fsh in Resources */,
+				184E2FC21B520EEA00750CD0 /* AlphaTestFragmentShader.fsh in Resources */,
+				184E2FCB1B520EEA00750CD0 /* VertexShader.vsh in Resources */,
+				184E2FC81B520EEA00750CD0 /* FragmentShader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184E2F8B1B520ED300750CD0 /* GKFence.m in Sources */,
+				184E2F891B520ED300750CD0 /* GKDrawGestureAwareObject.m in Sources */,
+				18F9F0A91A43FE74002EB7A8 /* AppDelegate.m in Sources */,
+				184E2F9E1B520ED300750CD0 /* GPDrawGestureRecognizer.m in Sources */,
+				184E2F901B520ED300750CD0 /* GKRenderDispatcher.m in Sources */,
+				184E2FB51B520ED300750CD0 /* UIScrollView+GKExtension.m in Sources */,
+				184E2F911B520ED300750CD0 /* GKRenderView.m in Sources */,
+				184E2F881B520ED300750CD0 /* GKComponentSystem.m in Sources */,
+				184E2F961B520ED300750CD0 /* GKTextureHelper.m in Sources */,
+				184E2F8E1B520ED300750CD0 /* GKObject.m in Sources */,
+				184E2FA91B520ED300750CD0 /* MotionController.m in Sources */,
+				184E2F801B520ED300750CD0 /* CGPointExtension.m in Sources */,
+				184E2F9A1B520ED300750CD0 /* GKVertexArrayObject.m in Sources */,
+				184E2F8D1B520ED300750CD0 /* GKLog.m in Sources */,
+				184E2F931B520ED300750CD0 /* GKRenderer.m in Sources */,
+				184E2F821B520ED300750CD0 /* EAGLContext+GraphitiKit.m in Sources */,
+				184E2FA31B520ED300750CD0 /* GPPointTracker.m in Sources */,
+				1828830A1A4950D600745E8E /* GKMainViewController.m in Sources */,
+				184E2FB41B520ED300750CD0 /* UIScreen+GraphitiKit.m in Sources */,
+				184E2F981B520ED300750CD0 /* GKTransformableObject.m in Sources */,
+				184E2FAA1B520ED300750CD0 /* NSBundle+GraphitiKit.m in Sources */,
+				184E2F8A1B520ED300750CD0 /* GKDripManager.m in Sources */,
+				184E2F951B520ED300750CD0 /* GKSplatEngine.m in Sources */,
+				184E2FAC1B520ED300750CD0 /* NSString+GraphitiKit.m in Sources */,
+				184E2F871B520ED300750CD0 /* GKComponent.m in Sources */,
+				184E2FAE1B520ED300750CD0 /* QuadraticPointTessellationStratergy.m in Sources */,
+				184E2F9B1B520ED300750CD0 /* GKViewportHelper.m in Sources */,
+				184E2F941B520ED300750CD0 /* GKSnapShotEngine.m in Sources */,
+				184E2F921B520ED300750CD0 /* GKRenderViewController.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				184E2F8C1B520ED300750CD0 /* GKGeometryObject.m in Sources */,
+				184E2F831B520ED300750CD0 /* EAGLContextStack.m in Sources */,
+				184E2FA81B520ED300750CD0 /* GestureController.m in Sources */,
+				184E2F9D1B520ED300750CD0 /* GLShaderProgram.m in Sources */,
+				184E2FB31B520ED300750CD0 /* UIColor+GraphitiKit.m in Sources */,
+				184E2F9C1B520ED300750CD0 /* GLSLProgram.m in Sources */,
+				184E2FAB1B520ED300750CD0 /* NSMutableArray+GraphitiKit.m in Sources */,
+				18F56DCA1B14448D00269592 /* UIColor+Helpers.m in Sources */,
+				1883E8EE1A4AAF9800EDA4D8 /* UIColor+HexColor.m in Sources */,
+				182882F61A49300800745E8E /* UIView+Utils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* GraphitiKit-iOS */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18F9F0311A43FE73002EB7A8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F9F0321A43FE73002EB7A8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GraphitiKit-iOS/GraphitiKit-iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "GraphitiKit-iOS/GraphitiKit-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GraphitiKit-iOS/GraphitiKit-iOS-Prefix.pch";
+				INFOPLIST_FILE = "GraphitiKit-iOS/GraphitiKit-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GraphitiKit-iOS.app/GraphitiKit-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GraphitiKit-iOS.app/GraphitiKit-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "GraphitiKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "GraphitiKit-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

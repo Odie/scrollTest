@@ -1,0 +1,137 @@
+PODS:
+  - AWSAutoScaling (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSCloudWatch (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSCore (2.2.1)
+  - AWSDynamoDB (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSEC2 (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSElasticLoadBalancing (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSiOSSDKv2 (2.2.1):
+    - AWSiOSSDKv2/AutoScaling (= 2.2.1)
+    - AWSiOSSDKv2/AWSCore (= 2.2.1)
+    - AWSiOSSDKv2/CloudWatch (= 2.2.1)
+    - AWSiOSSDKv2/DynamoDB (= 2.2.1)
+    - AWSiOSSDKv2/EC2 (= 2.2.1)
+    - AWSiOSSDKv2/ElasticLoadBalancing (= 2.2.1)
+    - AWSiOSSDKv2/Kinesis (= 2.2.1)
+    - AWSiOSSDKv2/MobileAnalytics (= 2.2.1)
+    - AWSiOSSDKv2/S3 (= 2.2.1)
+    - AWSiOSSDKv2/SES (= 2.2.1)
+    - AWSiOSSDKv2/SimpleDB (= 2.2.1)
+    - AWSiOSSDKv2/SNS (= 2.2.1)
+    - AWSiOSSDKv2/SQS (= 2.2.1)
+  - AWSiOSSDKv2/AutoScaling (2.2.1):
+    - AWSAutoScaling (= 2.2.1)
+  - AWSiOSSDKv2/AWSCore (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSiOSSDKv2/CloudWatch (2.2.1):
+    - AWSCloudWatch (= 2.2.1)
+  - AWSiOSSDKv2/DynamoDB (2.2.1):
+    - AWSDynamoDB (= 2.2.1)
+  - AWSiOSSDKv2/EC2 (2.2.1):
+    - AWSEC2 (= 2.2.1)
+  - AWSiOSSDKv2/ElasticLoadBalancing (2.2.1):
+    - AWSElasticLoadBalancing (= 2.2.1)
+  - AWSiOSSDKv2/Kinesis (2.2.1):
+    - AWSKinesis (= 2.2.1)
+  - AWSiOSSDKv2/MobileAnalytics (2.2.1):
+    - AWSMobileAnalytics (= 2.2.1)
+  - AWSiOSSDKv2/S3 (2.2.1):
+    - AWSS3 (= 2.2.1)
+  - AWSiOSSDKv2/SES (2.2.1):
+    - AWSSES (= 2.2.1)
+  - AWSiOSSDKv2/SimpleDB (2.2.1):
+    - AWSSimpleDB (= 2.2.1)
+  - AWSiOSSDKv2/SNS (2.2.1):
+    - AWSSNS (= 2.2.1)
+  - AWSiOSSDKv2/SQS (2.2.1):
+    - AWSSQS (= 2.2.1)
+  - AWSKinesis (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSMobileAnalytics (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSS3 (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSSES (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSSimpleDB (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSSNS (2.2.1):
+    - AWSCore (= 2.2.1)
+  - AWSSQS (2.2.1):
+    - AWSCore (= 2.2.1)
+  - GDataXML-HTML (1.2.0)
+  - GraphitiKit-iOS (0.3.27):
+    - GDataXML-HTML (~> 1.2.0)
+    - libextobjc (~> 0.4.1)
+  - libextobjc (0.4.1):
+    - libextobjc/EXTADT (= 0.4.1)
+    - libextobjc/EXTConcreteProtocol (= 0.4.1)
+    - libextobjc/EXTKeyPathCoding (= 0.4.1)
+    - libextobjc/EXTNil (= 0.4.1)
+    - libextobjc/EXTSafeCategory (= 0.4.1)
+    - libextobjc/EXTScope (= 0.4.1)
+    - libextobjc/EXTSelectorChecking (= 0.4.1)
+    - libextobjc/EXTSynthesize (= 0.4.1)
+    - libextobjc/NSInvocation+EXT (= 0.4.1)
+    - libextobjc/NSMethodSignature+EXT (= 0.4.1)
+    - libextobjc/RuntimeExtensions (= 0.4.1)
+    - libextobjc/UmbrellaHeader (= 0.4.1)
+  - libextobjc/EXTADT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSInvocation+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSMethodSignature+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4.1)
+  - libextobjc/UmbrellaHeader (0.4.1)
+  - PureLayout (2.0.6)
+
+DEPENDENCIES:
+  - AWSiOSSDKv2 (~> 2.0)
+  - GraphitiKit-iOS (from `../`)
+  - PureLayout
+
+EXTERNAL SOURCES:
+  GraphitiKit-iOS:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AWSAutoScaling: 91669a38141a4bd670ec11fbb2edfc7200f73643
+  AWSCloudWatch: 0b6afcafeea1f830cae6904d98da998223e5eea8
+  AWSCore: 55eb0d5e85bc1c7a05637957a05a7328be0b06dc
+  AWSDynamoDB: 4a16bdc5b9da19f43fba92d880ed90df6a7ec911
+  AWSEC2: 27cd6dfcdfb151525c628ef788645618aa646d5a
+  AWSElasticLoadBalancing: e4fdbc719ecac4385827c19b3f4107da25216e4b
+  AWSiOSSDKv2: 92bbec411121a7c2bc33428582843aa7f5f5630f
+  AWSKinesis: c6697d9d7b7dce04f092a707e3b9b53d96a92013
+  AWSMobileAnalytics: 5d89d09881b66a549b660c784321fd0b3ba56416
+  AWSS3: 665de364b4a7bfb573660b01a88dc1f71bf5c13d
+  AWSSES: 8f81c5d8a10ce909197e7a12b072e7b505e41492
+  AWSSimpleDB: cd1f7fb83090b63d89b8c635bdcea62525ec9977
+  AWSSNS: 95ed9aa1f9fa8ed48579d4cc7d7beb6ca026f82a
+  AWSSQS: 8d8d3f973d33cfc1a9786c137106d034f8a9a5e8
+  GDataXML-HTML: dac3692417e9fc612f8e12d8baae3706fccedcc8
+  GraphitiKit-iOS: 76e65da0707ec6ecf4a0edbf1155ac8ad865d26b
+  libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
+
+COCOAPODS: 0.35.0
