@@ -76,8 +76,8 @@
 
 - (void) setupGL;
 - (void) innerReset;
-- (void) startScale;
-- (void)changeScaleRatio:(CGFloat)scaleRatio atScreenPosiiton:(CGPoint)scalePosition;
+- (void) startScale:(UIPinchGestureRecognizer*)gesture;
+- (void) changeScaleRatio:(UIPinchGestureRecognizer*)gesture;
 - (void)accumulateOffset:(CGPoint)diff;
 @end
 
@@ -136,15 +136,15 @@
     };
 }
 
-- (void)startScale {
+- (void)startScale:(UIPinchGestureRecognizer*)gesture {
     _startScale = self.worldScale;
     _scaleRatio = 1.0;
     _scaleOrigin = _viewportTopLeft;
+    _scaleScreenPosition = [gesture locationInView:self.view];
 }
 
-- (void)changeScaleRatio:(CGFloat)scaleRatio atScreenPosiiton:(CGPoint)scalePosition {
-    _scaleScreenPosition = scalePosition;
-    _scaleRatio = scaleRatio;
+- (void)changeScaleRatio:(UIPinchGestureRecognizer*)gesture {
+    _scaleRatio = gesture.scale;
 }
 
 - (void) updateOffset {
@@ -553,13 +553,13 @@
 - (void) handlePinchGesture:(UIPinchGestureRecognizer *)gesture location:(CGPoint)location {
     switch(gesture.state) {
         case UIGestureRecognizerStateBegan: {
-            [self.controller startScale];
+			[self.controller startScale: gesture];
             break;
         }
         case UIGestureRecognizerStateChanged: {
             //            NSLog(@"change scale %f",gesture.scale);
             //            NSLog(@"loc %@",NSStringFromCGPoint([gesture locationInView:self.controller.view]));
-            [self.controller changeScaleRatio:gesture.scale atScreenPosiiton:[gesture locationInView:self.controller.view]];
+            [self.controller changeScaleRatio:gesture];
             break;
         }
         case UIGestureRecognizerStateEnded:
