@@ -122,6 +122,15 @@
     return worldPosition;
 }
 
+// worldPos = screenOrigin + screenCoord/worldScale
+// screenCoord = (worldPos - screenOrigin)*worldScale
+- (CGPoint) worldToScreenPosition:(CGPoint) pos {
+    CGPoint screenPosition;
+	screenPosition.x = (pos.x - _viewportTopLeft.x) * _worldScale;
+	screenPosition.y = (pos.y - _viewportTopLeft.y) * _worldScale;
+    return screenPosition;
+}
+
 - (void)accumulateOffset:(CGPoint)diff {
     _panOffset = (CGPoint) {
         _panOffset.x + diff.x,
@@ -144,22 +153,29 @@
     CGFloat scale = _scaleRatio * _startScale;
     CGPoint test = CGPointZero;
     if(scale > 0) {
-//        CGFloat scaleDiff = scale/_worldScale;
-//        NSLog(@"scale %f diff %f",scale,scaleDiff);
-//        CGSize screenSize = self.view.bounds.size;
-//        _scaleScreenPosition = (CGPoint){CGRectGetWidth(self.view.bounds)*0.5,CGRectGetHeight(self.view.bounds)*0.5};
-//        CGPoint worldPosition = [self screenToWorldPosition:_scaleScreenPosition];
-//        CGFloat x = screenSize.width*0.5/scale-worldPosition.x;
-//        CGFloat y = 0;
-//        NSLog(@"new world size %f %f",x,y);
-//        CGAffineTransform t1 = CGAffineTransformMakeTranslation(-worldPosition.x,-worldPosition.y);
-//        CGAffineTransform s = CGAffineTransformMakeScale(scale, scale);
-//        CGAffineTransform t2 = CGAffineTransformMakeTranslation(worldPosition.x,worldPosition.y);
-//        CGAffineTransform transform = CGAffineTransformConcat(CGAffineTransformConcat(t1, s),t2);
-//        test = CGPointApplyAffineTransform(_viewportTopLeft, transform);
-//        [self setTopLeft:(CGPoint){_viewportTopLeft.x+x,_viewportTopLeft.y+y}];
-//        NSLog(@"scaled origin %@",NSStringFromCGPoint(test));
-        self.worldScale = scale;
+		scale = 2.0;
+        CGFloat scaleDiff = scale/_worldScale;
+        NSLog(@"scale %f diff %f",scale,scaleDiff);
+        CGSize screenSize = self.view.bounds.size;
+		
+		// Get the "pinch center" in world space
+        _scaleScreenPosition = (CGPoint){CGRectGetWidth(self.view.bounds)*0.5,CGRectGetHeight(self.view.bounds)*0.5};
+        CGPoint worldPosition = [self screenToWorldPosition:_scaleScreenPosition];
+		
+		// Build a transform to scale around pinch center
+        CGAffineTransform t1 = CGAffineTransformMakeTranslation(-worldPosition.x,-worldPosition.y);
+        CGAffineTransform s = CGAffineTransformMakeScale(scale, scale);
+        CGAffineTransform t2 = CGAffineTransformMakeTranslation(worldPosition.x,worldPosition.y);
+        CGAffineTransform transform = CGAffineTransformConcat(CGAffineTransformConcat(t1, s),t2);
+		
+		// Find and set the new origin
+		CGPoint origin = {_viewportTopLeft.x, _viewportTopLeft.y};
+		CGPoint tOrigin = CGPointApplyAffineTransform(origin, transform);
+		tOrigin = [self worldToScreenPosition:tOrigin];
+		
+		[self setTopLeft:(CGPoint){tOrigin.x,tOrigin.y}];
+
+		self.worldScale = scale;
     }
     CGPoint origin = _viewportTopLeft;
     CGPoint newOrigin = (CGPoint){
