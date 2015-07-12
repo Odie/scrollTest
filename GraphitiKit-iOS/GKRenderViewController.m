@@ -106,8 +106,10 @@
     CGPoint _panOffset;
     CGFloat _startScale;
     CGFloat _scaleRatio;
-    CGPoint _scaleScreenPosition;
-    CGPoint _scaleOrigin;
+    CGPoint _scaleWorldPosition;
+	GLKMatrix4 _scaleWorldTransform;
+	
+	GLKMatrix4 _worldTransform;
 }
 
 #pragma mark - GKRenderView delegate
@@ -116,7 +118,6 @@
     CGPoint worldPosition;
     worldPosition.x = _viewportTopLeft.x + pos.x/_worldScale;
     worldPosition.y = _viewportTopLeft.y - pos.y/_worldScale;
-    NSLog(@"screen %@ world %@",NSStringFromCGPoint(pos),NSStringFromCGPoint(worldPosition));
     return worldPosition;
 }
 
@@ -139,58 +140,36 @@
 - (void)startScale:(UIPinchGestureRecognizer*)gesture {
     _startScale = self.worldScale;
     _scaleRatio = 1.0;
-    _scaleOrigin = _viewportTopLeft;
-    _scaleScreenPosition = [gesture locationInView:self.view];
+    _scaleWorldPosition = [self screenToWorldPosition:[gesture locationInView:self.view]];
+	
+	// Record the transformation matrix
+	_scaleWorldTransform = _worldTransform;
 }
 
 - (void)changeScaleRatio:(UIPinchGestureRecognizer*)gesture {
     _scaleRatio = gesture.scale;
+	[self updateOffset];
 }
 
 - (void) updateOffset {
+	// Get the "pinch center" in world space
+	CGPoint worldPosition = _scaleWorldPosition;
+	
+	// Build a transform to scale around pinch center
     CGFloat scale = _scaleRatio * _startScale;
-    CGPoint test = CGPointZero;
-    if(scale > 0) {
-		scale = 2.0;
-        CGFloat scaleDiff = scale/_worldScale;
-        NSLog(@"scale %f diff %f",scale,scaleDiff);
-        CGSize screenSize = self.view.bounds.size;
-		
-		// Get the "pinch center" in world space
-        _scaleScreenPosition = (CGPoint){CGRectGetWidth(self.view.bounds)*0.5,CGRectGetHeight(self.view.bounds)*0.5};
-        CGPoint worldPosition = [self screenToWorldPosition:_scaleScreenPosition];
-		
-		// Build a transform to scale around pinch center
-        CGAffineTransform t1 = CGAffineTransformMakeTranslation(-worldPosition.x,-worldPosition.y);
-        CGAffineTransform s = CGAffineTransformMakeScale(scale, scale);
-        CGAffineTransform t2 = CGAffineTransformMakeTranslation(worldPosition.x,worldPosition.y);
-        CGAffineTransform transform = CGAffineTransformConcat(CGAffineTransformConcat(t1, s),t2);
-		
-		// Find and set the new origin
-		CGPoint origin = {_viewportTopLeft.x, _viewportTopLeft.y};
-		CGPoint tOrigin = CGPointApplyAffineTransform(origin, transform);
-		tOrigin = [self worldToScreenPosition:tOrigin];
-		
-		[self setTopLeft:(CGPoint){tOrigin.x,tOrigin.y}];
-
-		self.worldScale = scale;
-    }
-    CGPoint origin = _viewportTopLeft;
-    CGPoint newOrigin = (CGPoint){
-        origin.x + _panOffset.x/_worldScale,
-        origin.y - _panOffset.y/_worldScale,
-    };
-
-    [self setTopLeft:newOrigin];
-    
-    _panOffset = CGPointZero;
-    _scaleRatio = 0;
+	GLKMatrix4 t1 = GLKMatrix4MakeTranslation(worldPosition.x, worldPosition.y, 0);
+	GLKMatrix4 s = GLKMatrix4MakeScale(scale, scale, 1);
+	GLKMatrix4 t2 = GLKMatrix4MakeTranslation(-worldPosition.x, -worldPosition.y, 0);
+	GLKMatrix4 transform = GLKMatrix4Multiply(GLKMatrix4Multiply(t1, s), t2);
+	
+	// Find and set the new origin
+	_worldTransform = GLKMatrix4Multiply(_scaleWorldTransform, transform);
 }
 
 - (void) update:(NSTimeInterval)deltaTime {
-    if(self.worldMode == GKWorldFinite) {
-        [self updateOffset];
-    }
+//    if(self.worldMode == GKWorldFinite) {
+//        [self updateOffset];
+//    }
 }
 
 - (void) view:(GKRenderView *)view drawInRect:(CGRect)rect {
@@ -202,10 +181,13 @@
     GLKVector3 eye = self.viewCenter;
 	GLKMatrix4 defaultProjectionMatrix = GLKMatrix4MakeOrtho(-size.width/2, size.width/2, -size.height/2, size.height/2, 0.01, 100);
     GLKMatrix4 cameraMatrix = GLKMatrix4MakeLookAt(eye.x,eye.y,1,eye.x,eye.y,0,0,1,0);
-    GLKMatrix4 projectionMatrix = GLKMatrix4Multiply(defaultProjectionMatrix, cameraMatrix);
+    GLKMatrix4 projectionMatrix = GLKMatrix4Multiply(GLKMatrix4Multiply(defaultProjectionMatrix, cameraMatrix), _worldTransform);
+	
+//	NSLog(@"size: {%f, %f}", size.width, size.height);
+//	NSLog(@"eye: {%f, %f}", eye.x, eye.y);
 	
 	// Render the world
-    [self.backgroundImageObject render:projectionMatrix];
+    [self.backgroundImageObject render: projectionMatrix];
 }
 
 #pragma mark <properties getter/setter>
@@ -329,6 +311,7 @@
 
 - (void)setupGL {
     if(!self.renderView) {
+		_worldTransform = GLKMatrix4Identity;
         CGRect frameRect = self.view.bounds;
         GKRenderView *renderView = [[GKRenderView alloc] initWithFrame:frameRect];
         [self.view addSubview:renderView];
